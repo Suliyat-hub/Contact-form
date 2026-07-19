@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="success-box"></div>
+    <div class="success-inner-box"></div>
+    <div class="success-top"></div>
+    <div class="container">
+    <h2>Contact Us</h2>
+    <form id="form" novalidate>
+    <div class="name-box">
+    <div class="inner-name-box">
+        <label for="first-name" class="label">First Name <span class="asterik">*</span></label>
+        <input type="text" id="first-name" name="first-name" required />
+        <span id="first-name-error" class="error"></span>
+    </div>
+
+    <div class="inner-name-box">
+        <label for="last-name" class="label">Last Name <span class="asterik">*</span></label>
+        <input type="text" id="last-name" name="last-name" required />
+        <span id="last-name-error" class="error"></span>
+    </div>
+    </div>
+     <div>
+    <label for="email" class="label">Email <span class="aster">*</span>
+    <input type="email" id="email" name="email" required />
+    <span id="email-error" class="error">
+        Please enter a valid email address
+    </span>
+    </div>  
+    
+    <div>
+    <label class="label">Query Type <span class="asterik">*</span></label>
+    <div class="query-div">
+        <label id="label-general" class="query-label">
+            <input id="general" type="radio" name="query-type" value="general" required />
+            <span class="query-text">General Enquiry</span>
+        </label>
+        <label id="label-support" class="query-label">
+            <input id="support" type="radio" name="query-type" value="support" required />
+            <span class="query-text">Support Request</span>
+        </label>
+    </div>
+    <span id="query-error" class="error"></span>
+</div>
+  
+<div>
+ <label for ="message">Message <span class=asterik>*</span></label>
+ <textarea id="message" name="message" required></textarea>
+ <span id="message-error" class="error">This field is required</span>
+ 
+ </div>
+
+ <div class="checkbox-div">
+    <label class="checkbox-label">
+        <input id="checkbox" type="checkbox" name="consent" required class="checkbox" />
+        <span class="checkbox-span">I consent to being contacted by the team <span class="asterisk">*</span></span>
+    </label>
+    <span id="checkbox-error" class="error">To submit this form, please consent to being contacted.</span>
+</div>
+    <p class="checkbox-help"> </p>
+
+<div>
+     <button type="submit">Submit</button>   
+</div> 
+</form>
+</div>
+
+<script defer src="./script.js"></script>
+           
+    
+</body>
+</html>
